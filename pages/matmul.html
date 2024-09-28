@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Embedded AI</title>
+        <link rel="stylesheet" href="../styles/matmul.css">
+    </head>
+    <body>
+        <h1 class="challengeHeading">Matrix Multiplication</h1>
+
+        <div class="challengeContainer">
+            <div class="notesContainer">
+                <h2 class="challengeHeading">Task</h2>
+                <div class="detailsContainer">
+                    <p class="notesText" id="desc">To complete the challenge, write a function that multiplies two matrices.</p>
+                    <div class="notesButtonPosition">
+                        <button class="notesButton" id="btn" onclick="displayChallengeNotes()">Details</button>
+                    </div>
+                </div>
+            </div>
+            <div class="middleContainer">
+
+            </div>
+            <div class="codeContainer">
+                <div class="ideContainer">
+                    <textarea class="ideTextarea">
+
+#include <stdarg.h>
+
+int matmul(int count, ...)
+{
+    va_list args;
+    va_start(args, count);
+                        
+    //...
+                        
+    va_end(args);
+                        
+    return foo;
+}
+                        </textarea>
+                    <div class="codeButtonPosition">
+                        <button class="codeButton" id="btn" onclick="submitCode()">Submit</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="goBackButtonDiv">
+            <a class="goBackButton" href="../main.html"><button>Back to the main page</button></a>
+        </div>
+
+        <script src="../js/app.js"></script> 
+    </body>
+</html>

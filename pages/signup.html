@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Embeddded AI - Sign Up</title>
+        <link rel="stylesheet" href="../styles/signup.css">
+    </head>
+    <body>
+        <div class="topBarDiv">
+            <a class="topBarButton" href="../main.html"><button>Home Page</button></a>
+        </div>
+        <h1><u>Sign Up</u></h1>
+        <div class="formContainer">
+            
+            <form id="signUpFormInput">
+                <label for="email">example@foo.com</label>
+                <br >
+                <input class="inputBars" type="email" id="email" required>
+                <br ><br >
+
+                <label for="password">password</label>
+                <br />
+                <input class="inputBars" type="password" id="password" required>
+                <br ><br >
+
+                <label for="password">confirm password</label>
+                <br />
+                <input class="inputBars" type="password" id="confirmpwd" required>
+                <br ><br >
+
+                <div class="submitButtonDiv">
+                    <input onclick="signUp()" type="submit" value="Submit">
+                </div>
+            </form>
+        </div>
+        <div class="haveAnAccountDiv">
+            <a href="login.html"><u>Have an account? Log in.</u></a>
+        </div>
+        <script src="../js/app.js"></script>
+    </body>
+</html>
