@@ -6,15 +6,27 @@
         <link rel="stylesheet" href="../styles/matmul.css">
     </head>
     <body>
-        <h1 class="challengeHeading">Matrix Multiplication</h1>
+        <h1 class="challengeHeading">Average of N</h1>
 
         <div class="challengeContainer">
             <div class="notesContainer">
                 <h2 class="challengeHeading">Task</h2>
                 <div class="detailsContainer">
-                    <p class="notesText" id="desc">To complete the challenge, write a function that multiplies two matrices.</p>
+                    <p class="notesText" id="desc">Write a variadic macro that averages an arbitrary number of N items
+                        passed as an input.
+                        <br /><br /><br />
+                        Usage: "float avg = AVERAGE(2, 5, 1, 7, 14, 3, 25);"
+                        <br />
+                        Output: "avg --&gt 8.142857"
+                        <br /><br />
+                        or
+                        <br /><br />
+                        Usage: "float avg = AVERAGE(7, 7, 5);"
+                        <br />
+                        Output: "avg --&gt 6.333333"
+                    </p>
                     <div class="notesButtonPosition">
-                        <button class="notesButton" id="btn" onclick="displayChallengeNotes()">Details</button>
+                        <button class="notesButton" id="btn" onclick="displayAverageNotes()">Details</button>
                     </div>
                 </div>
             </div>
@@ -25,19 +37,11 @@
                 <div class="ideContainer">
                     <textarea class="ideTextarea">
 
-#include <stdarg.h>
+#define AVERAGE (\
 
-int matmul(int count, ...)
-{
-    va_list args;
-    va_start(args, count);
-                        
-    //...
-                        
-    va_end(args);
-                        
-    return foo;
-}
+    //... \
+
+)
                         </textarea>
                     <div class="codeButtonPosition">
                         <button class="codeButton" id="btn" onclick="submitCode()">Submit</button>

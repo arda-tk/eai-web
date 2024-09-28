@@ -1,0 +1,121 @@
+body {
+    background-color: dimgray;
+}
+
+table {
+    border-collapse: collapse;
+    margin-right: auto;
+    margin-left: auto;
+    display: block;
+}
+
+th, td {
+    border: 2px solid #000;
+    text-align: left;
+    padding: 4px;
+    height: 60vh;
+    display: block;
+}
+
+tr {
+    background-color: #5D5D5D;
+}
+
+.challengeContainer {
+    margin-left: 3%;
+    margin-right: 3%;
+    margin-top: 1%;
+    margin-bottom: 4%;
+    display: flex;
+}
+
+.notesContainer {
+    border: 2px solid #000;
+    border-radius: 25px;
+    text-align: justify;
+    width: 40%;
+    height: 55vh;
+}
+
+.middleContainer {
+    width: 7%;
+    height: 55vh;
+}
+
+.codeContainer {
+    border: 2px solid #000;
+    border-radius: 25px;
+    width: 53%;
+    height: 55vh;
+}
+
+.challengeHeading {
+    text-align: center;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    padding: 4px;
+}
+
+.challengeDescription {
+    text-align: justify;
+}
+
+.detailsContainer {
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.ideContainer {
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.ideTextarea {
+    border: 2px solid #000;
+    border-radius: 25px;
+    text-align: left;
+    margin-top: 5%;
+    width: 70vh;
+    height: 40vh;
+}
+
+.notesText {
+    text-align: justify;
+}
+
+.notesButtonPosition {
+    justify-content: center;
+    display: flex;
+}
+
+.notesButton {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 5%;
+    justify-self: center;
+    position: fixed;
+    bottom: 20%;
+}
+
+.codeButtonPosition {
+    justify-content: center;
+    display: flex;
+}
+
+.codeButton {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 5%;
+    justify-self: center;
+    position: fixed;
+    bottom: 20%;
+}
+
+.goBackButtonDiv {
+    text-align: center;
+}
+
+.goBackButton {
+    display: inline-block;
+}
+
