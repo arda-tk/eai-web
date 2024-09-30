@@ -25,8 +25,8 @@ let notesButton = [
 ];
 
 let testUser = [
-    "aaa@foo.com",
-    "sifree000"
+    "test@example.com",
+    "password123"
 ];
 
 let counter = 0;
