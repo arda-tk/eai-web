@@ -53,26 +53,67 @@ function submitCode() {
     console.log("not implemented yet");
 }
 
-function signUp () {
-    if(document.getElementById("password") !== document.getElementById("confirmpwd"))
+function signUp(event) {
+    if(event)
     {
-        alert("passwords do not match, please check for typos.");
+        event.preventDefault();
     }
-    else
-    {
-        alert("successfully registered.");
-    }
+
+    const email = document.getElementById("email").value;
+    const pwd = document.getElementById("password").value;
+    const cpwd = document.getElementById("confirmpwd").value;
+
+
+    fetch('https://yjnlwskyyxfmqmbk3zqhrzpssm0wurmx.lambda-url.us-east-1.on.aws/', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ email: email, password: password }),
+    })
+    .then(response => response.json())
+    .then(data => {
+        if(pwd !== cpwd)
+            {
+                alert("passwords do not match, please check for typos.");
+            }
+            else
+            {
+                alert("successfully registered.");
+                window.location.href = "../index.html";
+            }
+    })
+    .catch(error => console.error('Error:', error));
+    
 }
 
-function logIn() {
-    if(document.getElementById("email").value === testUser[0]
-       &&
-       document.getElementById("password").value === testUser[1])
+function logIn(event) {
+    if(event)
     {
-        alert("login successful.");
+        event.preventDefault();
     }
-    else
-    {
-        alert("login credentials incorrect.");
-    }
+    
+    const email = document.getElementById("email").value;
+    const password = document.getElementById("password").value;
+    
+    fetch('https://yjnlwskyyxfmqmbk3zqhrzpssm0wurmx.lambda-url.us-east-1.on.aws/', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ email: email, password: password }),
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.success)
+        {
+            alert("Login successful.");
+            window.location.href = "../index.html";
+        }
+        else
+        {
+            alert("Invalid credentials.");
+        }
+    })
+    .catch(error => console.error('Error:', error));
 }

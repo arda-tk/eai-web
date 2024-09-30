@@ -17,7 +17,7 @@
                         <br /><br /><br />
                         Usage: "float avg = AVERAGE(2, 5, 1, 7, 14, 3, 25);"
                         <br />
-                        Output: "avg --&gt 8.142857"
+                        Output: "avg --&gt 8.142858"
                         <br /><br />
                         or
                         <br /><br />
@@ -37,11 +37,25 @@
                 <div class="ideContainer">
                     <textarea class="ideTextarea">
 
-#define AVERAGE (\
+#define AVERAGE(...) (    //...    )
+#define NUMARGS(...) (    sizeof((int[]){__VA_ARGS__}) / sizeof(int)    )
 
-    //... \
+int sum(int count, ...);
 
-)
+void main(void)
+{
+    printf("sum is: %f\n", AVERAGE(2, 5, 1, 7, 14, 3, 25));
+}
+
+int sum(int count, ...)
+{
+    int res=0;
+    va_list args;
+
+    //...
+
+    return res;
+}
                         </textarea>
                     <div class="codeButtonPosition">
                         <button class="codeButton" id="btn" onclick="submitCode()">Submit</button>
